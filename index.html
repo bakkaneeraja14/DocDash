@@ -1,0 +1,129 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>DocDash - Smart Clinic</title>
+
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+
+    <!-- Navigation Bar -->
+    <header>
+        <nav class="navbar">
+            <h2>💙 DocDash</h2>
+
+            <div class="nav-links">
+                <a href="#home">Home</a>
+                <a href="#doctors">Doctors</a>
+                <a href="#features">Features</a>
+            </div>
+
+            <a href="#doctors" class="nav-button">Book Now</a>
+        </nav>
+    </header>
+    
+    <!-- Home Section -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h1>Welcome to DocDash</h1>
+
+            <h2>Book. Wait. Track. Care.</h2>
+
+            <p>
+                Book your doctor appointment easily.
+                Track your token and reduce waiting time.
+            </p>
+
+            <a href="#doctors" class="main-button">
+                Book Appointment
+            </a>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features" id="features">
+
+        <h2>Our Services</h2>
+
+        <div class="feature-container">
+
+            <div class="feature-card">
+                <h3>🩺 Doctor Directory</h3>
+                <p>Find doctors by speciality.</p>
+            </div>
+
+            <div class="feature-card">
+                <h3>🎫 Token Booking</h3>
+                <p>Book your clinic token online.</p>
+            </div>
+
+            <div class="feature-card">
+                <h3>⏱️ Live Queue</h3>
+                <p>Check your estimated waiting time.</p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Doctors Section -->
+    <section class="doctors" id="doctors">
+
+        <h2>Our Doctors</h2>
+
+        <div class="doctor-container" id="doctorList">
+            <!-- JavaScript displays doctors here -->
+        </div>
+
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2026 DocDash. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>
+
+
+<!-- Appointment Booking Section -->
+<section class="booking" id="booking">
+
+    <h2>Book Your Appointment</h2>
+
+    <form id="bookingForm">
+
+        <input
+            type="text"
+            id="patientName"
+            placeholder="Enter Patient Name"
+            required
+        >
+
+        <input
+            type="tel"
+            id="phone"
+            placeholder="Enter Mobile Number"
+            pattern="[0-9]{10}"
+            required
+        >
+
+        <select id="shift" required>
+            <option value="">Select Shift</option>
+            <option value="Morning">Morning</option>
+            <option value="Evening">Evening</option>
+        </select>
+
+        <button type="submit">
+            Confirm Appointment
+        </button>
+
+    </form>
+
+    <div id="bookingResult"></div>
+
+</section>
